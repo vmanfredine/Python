@@ -8,28 +8,28 @@ print(fruit)
 fruit = []
 print(fruit)
 
-# Declarando a lista com itens
+# Declarando a loop com itens
 fruit = ['maçã', 'banana', 'laranja']
 print(fruit)
 
-# Adicionar novo item ao final da lista
+# Adicionar novo item ao final da loop
 # append
 fruit.append('pera')
 print(fruit)
 
-# Recuperar item da lista pelo índice
+# Recuperar item da loop pelo índice
 print(fruit[0])
 print(fruit[1])
 print(fruit[2])
 print(fruit[3])
 
-# Alterar item da lista
+# Alterar item da loop
 colors = ["blue", "green", "yellow"]
 print(colors)
 colors[2] = "red"
 print(colors)
 
-# Remover último item da lista
+# Remover último item da loop
 print(colors)
 item = colors.pop() # item que foi removido foi salvo na variável 'item'
 print(item)
@@ -43,8 +43,8 @@ print(colors1 + colors2)
 # Verificar existência de um item
 print("green" in colors1)
 
-# Verificar se o item não existe na lista
+# Verificar se o item não existe na loop
 print("black" not in colors1)
 
-# Verificar tamanho da lista
+# Verificar tamanho da loop
 print(len(colors))

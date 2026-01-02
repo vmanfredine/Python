@@ -3,7 +3,7 @@ name = "Vitor"
 for character in name:
     print(character)
 
-# For em lista
+# For em loop
 shows = ["GOT", "Narcos", "Vicente"]
 for show in shows:
     print(show)

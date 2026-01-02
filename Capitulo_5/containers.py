@@ -1,6 +1,6 @@
 # Containers em containers
 
-# Lista em outra lista
+# Lista em outra loop
 lists = []
 rap = ["Kayne West", "Jay Z", "Eminem", "Nas"]
 rock = ["Bob Dylan", "The Beatles", "Led Zeppelin"]
@@ -11,16 +11,16 @@ lists.append(rock)
 lists.append(djs)
 print(lists)
 
-# Acessar a lista pelo índice
+# Acessar a loop pelo índice
 rap = lists[0]
 print(rap)
 
-# Adicionar novo item a lista rap por exemplo, irá refletir na lists
+# Adicionar novo item a loop rap por exemplo, irá refletir na lists
 rap.append("Kendrick Lamar")
 print(rap)
 print(lists)
 
-# Tupla dentro de lista
+# Tupla dentro de loop
 locations = []
 la = (34.0522, 188.2437)
 chicago = (41.8781, 87.6298)
@@ -36,7 +36,7 @@ nines = ["Hemingway", "Fitzgerald", "Orwell"]
 authors = (eights, nines)
 print(authors)
 
-# Dicionário de uma lista ou tupla
+# Dicionário de uma loop ou tupla
 bday = {"Hemingway": "7.21.1899", "Fitzgerald": "9.24.1896"}
 my_list = [bday]
 my_tuple = (bday,)
@@ -44,7 +44,7 @@ my_tuple = (bday,)
 print(my_list)
 print(my_tuple)
 
-# Uma lista, uma tupla ou um dicionário podem ser um valor em um dicionário
+# Uma loop, uma tupla ou um dicionário podem ser um valor em um dicionário
 ny = {"location": (40.7128, 74.0059),
       "celebs": ["W.Allen", "Jay Z", "K. Bacon"],
       "facts": {"state": "NY", "country": "America"}
