@@ -1,17 +1,31 @@
 from rich import print
+import time
 
 class Livro:
     def __init__(self, titulo, paginas):
         self.titulo = titulo
-        self.paginas = paginas
-        print(f":book: [blue]Você acabou de  abrir o livro [red]'{self.titulo}'[/] que tem [green]{self.paginas} páginas[/] no total. Você está agora na [yellow]página 1[/].[/blue]")
+        self.total_paginas = paginas
+        self.pagina_atual = 1
 
-    def avancar_paginas(self, paginas_lidas):
-        if paginas_lidas > self.paginas:
-            print(f":warning: Você chegou ao final do livro '{self.titulo}'")
-        else:
-            print(f"Você avançou {paginas_lidas} páginas e agora está na página {paginas_lidas + 1}")
+        print(f":open_book: [blue]Você acabou de  abrir o livro [red]'{self.titulo}'[/] que tem [green]{self.total_paginas} páginas[/] no total. Você está agora na [yellow]página {self.pagina_atual}[/].[/blue]")
+
+    def avancar_paginas(self, qtd = 1):
+        cont = 0
+        for pg in range(0, qtd, 1):
+            if not self.fim_do_livro():
+                self.pagina_atual += 1
+                print(f"Página {self.pagina_atual} :arrow_forward: ", end='')
+                time.sleep(0.3)
+                cont += 1
+        print(f"[blue]Você avançou {cont} páginas e está agora na [yellow]página {self.pagina_atual}[/].[/blue]")
+        if self.fim_do_livro():
+            print(f":closed_book: [red]Você chegou ao final do livro '{self.titulo}'[/]")
+
+    def fim_do_livro(self) -> bool:
+        return True if self.pagina_atual == self.total_paginas else False
+
 
 l1 = Livro("O Boneco de Neve", 20)
+l1.avancar_paginas(5)
 l1.avancar_paginas(10)
-l1.avancar_paginas(20)
+l1.avancar_paginas(60)

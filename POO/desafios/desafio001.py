@@ -6,7 +6,7 @@ class Funcionario:
         self.setor = setor
         self.cargo = cargo
 
-    def apresentacao(self):
+    def apresentacao(self) -> str:
         return f":handshake: Olá, sou [blue]{self.nome}[/] e sou {self.cargo} do setor de {self.setor} da Empresa XXX"
 
 func1 = Funcionario("Vitor", "TI", "Analista de processos")
